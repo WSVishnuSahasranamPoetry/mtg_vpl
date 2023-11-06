@@ -18,6 +18,16 @@ export const card4sale = pgTable("card4sale", {
 
 export type Card4sale = InferModel<typeof card4sale>;
 
+export const decks = pgTable("decks", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  name: text("name").notNull(),
+  playes: text("playes").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull()
+});
+
+export type Decks = InferModel<typeof decks>;
+
 export const wishlistcard = pgTable("wishlistcard", {
     id: uuid("id").primaryKey().defaultRandom(),
     name: text("name").notNull(),

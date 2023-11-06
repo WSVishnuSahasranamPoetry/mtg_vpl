@@ -42,13 +42,13 @@ const NavBar = () => {
                 router.push("/shop");
                 setIsOpen(false);
               }}
-              className=" hover:bg-blue-300 hover:scale-105 cursor-pointer transform transition duration-300 
+              className=" hover:bg-gray-700 hover:scale-105 cursor-pointer transform transition duration-300 
               flex items-center justify-center mx-6 text-lg
-            bg-blue-500/50 px-4 space-x-4 rounded-3xl p-2  mb-2"
+            bg-black/70 border-white px-4 space-x-4 rounded-3xl p-2 border-solid border-2  mb-2"
             >
               <div>
                 <div
-                  className={`${stalinist.className} text-4xl md:text-4xl font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
+                  className={`${stalinist.className} text-2xl md:text-4xl md:font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
                 >
                   Магазин
                 </div>
@@ -59,13 +59,13 @@ const NavBar = () => {
                 router.push("/wishlist");
                 setIsOpen(false);
               }}
-              className=" hover:bg-blue-300 hover:scale-105 cursor-pointer transform transition duration-300 
+              className="  hover:scale-105 cursor-pointer transform transition duration-300 
               flex items-center justify-center mx-6 text-lg
-            bg-blue-500/50 px-4 space-x-4 rounded-3xl p-2  mb-2"
+             px-4 space-x-4 rounded-3xl p-2 bg-black/70 border-white border-solid border-2 hover:bg-gray-700 mb-2"
             >
               <div>
                 <div
-                  className={`${stalinist.className} text-4xl md:text-4xl font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
+                  className={`${stalinist.className} text-2xl md:text-4xl md:font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
                 >
                   WishList
                 </div>
@@ -76,13 +76,13 @@ const NavBar = () => {
                 router.push("/statistics");
                 setIsOpen(false);
               }}
-              className=" hover:bg-blue-300 hover:scale-105 cursor-pointer transform transition duration-300 
+              className="  hover:scale-105 cursor-pointer transform transition duration-300 
               flex items-center justify-center mx-6 text-lg
-            bg-blue-500/50 px-4 space-x-4 rounded-3xl p-2  mb-2"
+              bg-black/70  px-4 space-x-4 rounded-3xl p-2 g-black/70 border-white border-solid border-2 hover:bg-gray-700 mb-2"
             >
               <div>
                 <div
-                  className={`${stalinist.className} text-4xl md:text-4xl font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
+                  className={`${stalinist.className} text-2xl md:text-4xl md:font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
                 >
                   Статистика
                 </div>
@@ -93,12 +93,12 @@ const NavBar = () => {
                 router.push("/contacts");
                 setIsOpen(false);
               }}
-              className=" hover:bg-blue-300 hover:scale-105 cursor-pointer transform transition duration-300 
+              className="  hover:scale-105 cursor-pointer transform transition duration-300 
               flex items-center justify-center mx-6 text-lg
-            bg-blue-500/50 px-4 space-x-4 rounded-3xl p-2  mb-2"
+            px-4 space-x-4 rounded-3xl p-2 g-black/70 border-white bg-black/70 border-solid border-2 hover:bg-gray-700 mb-2"
             >
               <div
-                className={`${stalinist.className} text-4xl md:text-4xl font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
+                className={`${stalinist.className} text-2xl md:text-4xl md:font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
               >
                 Контакты
               </div>
@@ -108,12 +108,12 @@ const NavBar = () => {
                 router.push("/admin");
                 setIsOpen(false);
               }}
-              className=" hover:bg-blue-300 hover:scale-105 cursor-pointer transform transition duration-300 
+              className=" hover:scale-105 cursor-pointer transform transition duration-300 
               flex items-center justify-center mx-6 text-lg
-            bg-blue-500/50 px-4 space-x-4 rounded-3xl p-2  mb-2"
+             px-4 space-x-4 rounded-3xl p-2 border-white bg-black/70 border-solid border-2 hover:bg-gray-700 mb-2"
             >
               <div
-                className={`${stalinist.className} text-4xl md:text-4xl font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
+                className={`${stalinist.className} text-2xl md:text-4xl md:font-bold text-white/90 [text-shadow:_10px_4px_10px_rgb(0_0_0_/_80%)]`}
               >
                 Управление
               </div>
@@ -123,12 +123,12 @@ const NavBar = () => {
       </Dialog>
       <div className="w-screen px-3 text-white/70 sm:text-xl lg:text-3xl bg-black/50 sticky top-0 flex justify-between items-end">
         <h1
-          className={`cursor-pointer ${alumni.className}  md:text-5xl text-5xl transition duration-150 hover:text-white`}
+          className={`cursor-pointer ${alumni.className}  md:text-5xl text-2xl transition duration-150 hover:text-white`}
           onClick={() => {
             router.push("/");
           }}
         >
-          WPL
+          W<span className={`text-sm ${stalinist.className} md:text-base`}>{`ithcr's`}</span> P<span className={`text-sm ${stalinist.className} md:text-base`}>lainswalkers</span> L<span className={`text-sm ${stalinist.className} md:text-base`}>{`ibrary`}</span>
         </h1>
 
         <button

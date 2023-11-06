@@ -1,8 +1,7 @@
 "use server";
 
-import { eq } from "drizzle-orm";
 import { db } from "../db";
-import { card4sale, wishlistcard } from "../db/schema";
+import { card4sale, decks, wishlistcard } from "../db/schema";
 
 export const handleWishList = async ({wishCardName, wishCardQuantity, wishCardURL}:{wishCardName: string, wishCardQuantity: string, wishCardURL: string}) => {
   
@@ -68,25 +67,29 @@ export const getShop = async () => {
       }
     };
 
-// export const editCadr4Sale = async ({sahasraId, sahasraName, sahasraText}:{sahasraId:string, sahasraName:string, sahasraText:string}) => {
+export const addMetaDeck = async ({deckName, playes}:{deckName:string, playes:string}) => {
+    if(deckName === "") return;
 
-//   try {
-//     let query = await db.update(sahasranam)
-//     .set({ name: sahasraName, text: sahasraText })
-//     .where(eq(sahasranam.id, sahasraId))
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
+    if(playes === "") return;
 
-// export const editWishCart = async ({sahasraId, sahasraText}:{sahasraId:string, sahasraText:string}) => {
+    await db.insert(decks)
+    .values({
+        name: deckName,
+        playes: playes
+    });
+}
 
-//   try {
-//     let query = await db.update(poetry)
-//     .set({ text: sahasraText })
-//     .where(eq(poetry.id, sahasraId))
-//   } catch (error) {
-//     console.error(error);
-//   }
-// };
+export const getAllDecks = async () => {
+  try {
+    let query = db
+    .select()
+    .from(decks)
 
+    const rows = await query;
+
+    return rows;
+
+  } catch (error) {
+    console.log(error);
+  }
+}

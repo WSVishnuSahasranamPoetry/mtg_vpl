@@ -6,10 +6,19 @@ const rubick = Amatic_SC({
   weight: "400"
 });
 
+const alumni = Stalinist_One({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+
 const ContactsPage = () => {
+
+
   return (
-    <main className="flex items-center min-h-[90vh] justify-center">
-      <div className={`${rubick.className} flex flex-col max-w-2xl pt-14 w-full text-5xl text-bold bg-white/70 text-center items-center justify-start p-4`}>
+    <main className="flex flex-col items-center min-h-[90vh] justify-start">
+      <h2 className={`${alumni.className} text-white/70 w-full text-center text-2xl bg-black/50 px-3 rounded-t-none rounded-xl`}>Контакты</h2>
+      <div className={`${rubick.className} flex flex-col max-w-2xl mt-[1vh] md:mt-[17vh] pt-14 w-full text-5xl text-bold bg-white/70 text-center items-center justify-start p-4`}>
       <div>Если Вас заинтересовала  карта из магазина  или Вы хотели бы поиграть  со мной в Стандарт   или у Вас есть карта  из моего WishLista  или хотите просто пообщаться {`=)`}  звоните и пишите!</div>
       <div className="text-black/50 mt-14 flex text-sm">
           <div className='text-3xl'>Мои контакты:</div>
