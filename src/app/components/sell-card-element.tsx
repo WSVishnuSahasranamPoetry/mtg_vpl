@@ -34,7 +34,7 @@ const SellCardElement = ({
   return (
     <div onClick={() => setIsOpen(true)} className='flex flex-col justify-between items-center mx-1 my-2 bg-gradient-to-r from-white/70 border-2 border-black to-gray-600/70 w-[180px] h-[310px] rounded-3xl px-3 py-1'>
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="text-center hover:border-none border-none absolute border-none  left-1/2 transform -translate-x-1/2 p-6">
+        <DialogContent className="text-center outline-none hover:border-none border-none absolute  left-1/2 transform -translate-x-1/2 p-6">
           <div className='h-[340px] bg-gradient-to-r from-white/70 border-2 border-black to-gray-600/70 w-[240px] rounded-2xl'>
             <Image className=' rounded-2xl w-[240px] h-[340px]' width={480} height={680} alt="card" src={`${url}`}/>
           </div>
